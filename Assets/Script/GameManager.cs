@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Disc[] discs;
     [SerializeField] DiscHolder[] discHolders;
-
     [SerializeField] double snapDistance;
-
+    public GameObject blinker;
     public static GameManager Inst = null;
 
     public List<string> currentConstructedString;
@@ -36,6 +36,28 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool levelCompleted = true;
+        if (currentConstructedString.Count == currentSentence.Length)
+        {
+            for (int i = 0; i < currentSentence.Length; i++)
+            {
+                if (!currentSentence[i].Equals(currentConstructedString[i]))
+                    levelCompleted = false;
+            }
+        }
+        else
+            levelCompleted = false;
+
+        if (levelCompleted)
+        {
+            blinker.SetActive(true);
+            Invoke("LoadNextScene", 0.6f);
+        }
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public DiscHolder GetClosestDiscHolderToPosition(Vector2 position)

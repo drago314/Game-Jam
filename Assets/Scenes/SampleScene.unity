@@ -488,6 +488,7 @@ MonoBehaviour:
   - {fileID: 0}
   discHolders: []
   snapDistance: 10
+  blinker: {fileID: 1521506669}
   currentConstructedString: []
   currentSentence:
   - Woody
@@ -496,11 +497,6 @@ MonoBehaviour:
   - old
   - map
   - in
-  - the
-  - boxes
-  - in
-  - the
-  - attic
   sentenceClips:
   - {fileID: 8300000, guid: 3c2472ecf677144bc9070a826f5c33a3, type: 3}
   - {fileID: 8300000, guid: 7006b82cd9780437aabf1c6f93bc4018, type: 3}
