@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Inst = null;
 
     public List<string> currentConstructedString;
-    public string currentSentence;
-    [HideInInspector] public int currentSentenceLength;
+    public string[] currentSentence;
+    public AudioClip[] sentenceClips;
 
     private void Awake()
     {
@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
         Inst = this;
 
         currentConstructedString = new List<string>();
-        NewSentence(currentSentence);
     }
 
     // Start is called before the first frame update
@@ -70,11 +69,5 @@ public class GameManager : MonoBehaviour
                 print += disc.gameObject.name + " is on " + disc.GetHolder().gameObject.name + "\n";
 
         Debug.Log(print);
-    }
-
-    public void NewSentence(string s)
-    {
-        currentSentence = s;
-        currentSentenceLength = s.Split(' ').Length;
     }
 }

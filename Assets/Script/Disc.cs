@@ -12,8 +12,7 @@ public class Disc : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
 
-    [SerializeField] private AudioClip[] audioClips;
-    [SerializeField] private string[] clipValues;
+    [SerializeField] private int[] myWordIndeces;
 
     private bool dragging;
     private Vector3 dragOffset;
@@ -110,21 +109,21 @@ public class Disc : MonoBehaviour
     // plays every word in 2 second intervals to allow for other records to play in the blank space
     IEnumerator StartPlayingClips()
     {
-        for (int i = 0; i < audioClips.Length; i++)
+        for (int i = 0; i < myWordIndeces.Length; i++)
         {
-            audioSource.clip = audioClips[i];
+            GameManager gm = GameManager.Inst;
+
+            audioSource.clip = gm.sentenceClips[myWordIndeces[i]];
             audioSource.Play();
 
-            GameManager gm = GameManager.Inst;
-            if (gm.currentConstructedString.Count < gm.currentSentenceLength) gm.currentConstructedString.Add(clipValues[i]);
+            if (gm.currentConstructedString.Count < gm.currentSentence.Length) gm.currentConstructedString.Add(gm.currentSentence[myWordIndeces[i]]);
             else
             {
                 gm.currentConstructedString.RemoveAt(0);
-                gm.currentConstructedString.Add(clipValues[i]);
+                gm.currentConstructedString.Add(gm.currentSentence[myWordIndeces[i]]);
             }
-            Debug.Log(gameObject.name + "played: " + clipValues[i]);
-
-            yield return new WaitForSeconds(2);
+            if (i < myWordIndeces.Length - 1) yield return new WaitForSeconds(Mathf.Abs(myWordIndeces[i] - myWordIndeces[i + 1]));
+            else { yield return null; }
         }
     }
 
