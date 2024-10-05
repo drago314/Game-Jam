@@ -17,10 +17,17 @@ public class Disc : MonoBehaviour
     private bool dragging;
     private Vector3 dragOffset;
 
+    private Vector3 defaultScale;
+    private float currentScaleMult = 1;
+
+    private Vector2 goToPos;
+    private float snapSpeed = 10;
+
     // Start is called before the first frame update
     void Start()
     {
         SetHolder(currentHolder);
+        defaultScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -37,21 +44,26 @@ public class Disc : MonoBehaviour
         //drag
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
+        Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
-            if (targetObject && targetObject.transform.gameObject == this.gameObject)
+        if (targetObject && targetObject.transform.gameObject == this.gameObject)
+        {
+            currentScaleMult = 1.15f;
+            if (Input.GetMouseButtonDown(0))
             {
                 dragging = true;
                 dragOffset = transform.position - mousePosition;
             }
         }
+        else { currentScaleMult = 1; }
 
         if (dragging)
         {
             transform.position = mousePosition + dragOffset;
+            currentScaleMult = 1;
         }
+
+        transform.localScale = Vector3.Lerp(transform.localScale, currentScaleMult * defaultScale, 10*Time.deltaTime);
 
         if (Input.GetMouseButtonUp(0) && dragging)
         {
@@ -69,6 +81,8 @@ public class Disc : MonoBehaviour
 
             dragging = false;
         }
+
+        if (!dragging) transform.position = Vector2.Lerp(transform.position, goToPos, snapSpeed * Time.deltaTime);
     }
 
     public float GetRotation()
@@ -78,7 +92,7 @@ public class Disc : MonoBehaviour
 
     private void Spin()
     {
-        transform.Rotate(new Vector3(0, 0, spinSpeed));
+        transform.Rotate(new Vector3(0, 0, spinSpeed * Time.deltaTime));
     }
 
     public void SetHolder(DiscHolder discHolder)
@@ -96,7 +110,7 @@ public class Disc : MonoBehaviour
 
     private void SnapToHolder()
     {
-        transform.position = currentHolder.transform.position;
+        goToPos = currentHolder.transform.position;
     }
 
     public void PlayDisc()
