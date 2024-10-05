@@ -130,6 +130,7 @@ public class Disc : MonoBehaviour
     public void StopDisc()
     {
         spinning = false;
+        transform.rotation = Quaternion.identity;
         audioSource.Stop();
         StopCoroutine(StartPlayingClips());
     }

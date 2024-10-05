@@ -496,11 +496,6 @@ MonoBehaviour:
   - old
   - map
   - in
-  - the
-  - boxes
-  - in
-  - the
-  - attic
   sentenceClips:
   - {fileID: 8300000, guid: 3c2472ecf677144bc9070a826f5c33a3, type: 3}
   - {fileID: 8300000, guid: 7006b82cd9780437aabf1c6f93bc4018, type: 3}
@@ -1553,7 +1548,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948660566}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}

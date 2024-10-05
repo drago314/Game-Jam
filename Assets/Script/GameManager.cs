@@ -36,6 +36,20 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool levelCompleted = true;
+        if (currentConstructedString.Count == currentSentence.Length)
+        {
+            for (int i = 0; i < currentSentence.Length; i++)
+            {
+                if (!currentSentence[i].Equals(currentConstructedString[i]))
+                    levelCompleted = false;
+            }
+        }
+        else
+            levelCompleted = false;
+
+        if (levelCompleted)
+            Debug.Log("LEVEL COMPLETED!");
     }
 
     public DiscHolder GetClosestDiscHolderToPosition(Vector2 position)
