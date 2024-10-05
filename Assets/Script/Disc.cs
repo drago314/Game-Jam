@@ -11,7 +11,9 @@ public class Disc : MonoBehaviour
     private bool spinning;
 
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip audioClip;
+
+    [SerializeField] private AudioClip[] audioClips;
+    [SerializeField] private string[] clipValues;
 
     private bool dragging;
     private Vector3 dragOffset;
@@ -19,7 +21,6 @@ public class Disc : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.clip = audioClip;
         SetHolder(currentHolder);
     }
 
@@ -103,11 +104,34 @@ public class Disc : MonoBehaviour
     {
         spinning = true;
         audioSource.Play();
+        StartCoroutine(StartPlayingClips());
+    }
+
+    // plays every word in 2 second intervals to allow for other records to play in the blank space
+    IEnumerator StartPlayingClips()
+    {
+        for (int i = 0; i < audioClips.Length; i++)
+        {
+            audioSource.clip = audioClips[i];
+            audioSource.Play();
+
+            GameManager gm = GameManager.Inst;
+            if (gm.currentConstructedString.Count < gm.currentSentenceLength) gm.currentConstructedString.Add(clipValues[i]);
+            else
+            {
+                gm.currentConstructedString.RemoveAt(0);
+                gm.currentConstructedString.Add(clipValues[i]);
+            }
+            Debug.Log(gameObject.name + "played: " + clipValues[i]);
+
+            yield return new WaitForSeconds(2);
+        }
     }
 
     public void StopDisc()
     {
         spinning = false;
         audioSource.Stop();
+        StopCoroutine(StartPlayingClips());
     }
 }
