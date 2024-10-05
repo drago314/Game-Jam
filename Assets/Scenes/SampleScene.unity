@@ -182,6 +182,22 @@ PrefabInstance:
       propertyPath: currentHolder
       value: 
       objectReference: {fileID: 61542204}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: clipValues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: clipValues.Array.data[0]
+      value: this
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: clipValues.Array.data[1]
+      value: a
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -299,6 +315,9 @@ MonoBehaviour:
   - {fileID: 0}
   discHolders: []
   snapDistance: 10
+  currentConstructedString: []
+  currentSentence: this is a test it is only a test
+  currentSentenceLength: 0
 --- !u!4 &475685295
 Transform:
   m_ObjectHideFlags: 0
@@ -478,6 +497,22 @@ PrefabInstance:
       propertyPath: currentHolder
       value: 
       objectReference: {fileID: 1864991666}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: clipValues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: clipValues.Array.data[0]
+      value: is
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: clipValues.Array.data[1]
+      value: test
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
