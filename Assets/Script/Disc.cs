@@ -10,7 +10,10 @@ public class Disc : MonoBehaviour
     private double spinTimer = 0;
     private bool spinning;
 
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource, staticSource;
+    public AudioSource foleySource;
+    [SerializeField] private AudioClip placeClip, playClip;
+    private float staticSourceVol;
 
     [SerializeField] private int[] myWordIndeces;
 
@@ -28,18 +31,14 @@ public class Disc : MonoBehaviour
     {
         SetHolder(currentHolder);
         defaultScale = transform.localScale;
+        staticSourceVol = staticSource.volume;
     }
 
     // Update is called once per frame
     void Update()
     {
         // spin
-        spinTimer -= Time.deltaTime;
-        if (spinTimer < 0 && spinning)
-        {
-            spinTimer = spinTime;
-            Spin();
-        }
+        if (spinning) { Spin(); }
 
         //drag
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -53,6 +52,7 @@ public class Disc : MonoBehaviour
             {
                 dragging = true;
                 dragOffset = transform.position - mousePosition;
+                if (spinning) { StopDisc(); }
             }
         }
         else { currentScaleMult = 1; }
@@ -115,9 +115,12 @@ public class Disc : MonoBehaviour
 
     public void PlayDisc()
     {
+        if (spinning) return;
         spinning = true;
         audioSource.Play();
-        StartCoroutine(StartPlayingClips());
+        staticSource.Play();
+        foleySource.PlayOneShot(playClip);
+        StartCoroutine("StartPlayingClips");
     }
 
     // plays every word in 2 second intervals to allow for other records to play in the blank space
@@ -130,6 +133,9 @@ public class Disc : MonoBehaviour
             audioSource.clip = gm.sentenceClips[myWordIndeces[i]];
             audioSource.Play();
 
+            staticSource.volume = staticSourceVol / 2;
+            Invoke("ReupStatic", audioSource.clip.length);
+
             if (gm.currentConstructedString.Count < gm.currentSentence.Length) gm.currentConstructedString.Add(gm.currentSentence[myWordIndeces[i]]);
             else
             {
@@ -137,15 +143,22 @@ public class Disc : MonoBehaviour
                 gm.currentConstructedString.Add(gm.currentSentence[myWordIndeces[i]]);
             }
             if (i < myWordIndeces.Length - 1) yield return new WaitForSeconds(Mathf.Abs(myWordIndeces[i] - myWordIndeces[i + 1]));
-            else { yield return null; }
+            else 
+            {
+                yield return new WaitForSeconds(2);
+                foleySource.PlayOneShot(playClip);
+                StopDisc();
+            }
         }
     }
+    private void ReupStatic() { staticSource.volume = staticSourceVol; }
 
     public void StopDisc()
     {
         spinning = false;
-        transform.rotation = Quaternion.identity;
+        //transform.rotation = Quaternion.identity;
         audioSource.Stop();
-        StopCoroutine(StartPlayingClips());
+        staticSource.Stop();
+        StopCoroutine("StartPlayingClips");
     }
 }
