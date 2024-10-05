@@ -16,7 +16,7 @@ public class Disc : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetHolder(currentHolder);
     }
 
     // Update is called once per frame
@@ -51,8 +51,18 @@ public class Disc : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && dragging)
         {
-            currentHolder = GameManager.Inst.GetClosestDiscHolderToPosition(transform.position);
-            transform.position = currentHolder.transform.position;
+            DiscHolder discHolder = GameManager.Inst.GetClosestDiscHolderToPosition(transform.position);
+            if (discHolder != null)
+            {
+                if (discHolder.GetDiscHeld() != null)
+                    discHolder.GetDiscHeld().SetHolder(currentHolder);
+                SetHolder(discHolder);
+            }
+
+            SnapToHolder();
+
+            GameManager.Inst.DebugNodes();
+
             dragging = false;
         }
     }
@@ -70,5 +80,23 @@ public class Disc : MonoBehaviour
     private void Spin()
     {
         transform.Rotate(new Vector3(0, 0, spinSpeed));
+    }
+
+    public void SetHolder(DiscHolder discHolder)
+    {
+        currentHolder.DetatchDisc(this);
+        currentHolder = discHolder;
+        currentHolder.AttachDisc(this);
+        SnapToHolder();
+    }
+
+    public DiscHolder GetHolder()
+    {
+        return currentHolder;
+    }
+
+    private void SnapToHolder()
+    {
+        transform.position = currentHolder.transform.position;
     }
 }

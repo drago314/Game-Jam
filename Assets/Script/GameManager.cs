@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] List<Disc> discs = new List<Disc>();
+    [SerializeField] Disc[] discs;
     [SerializeField] DiscHolder[] discHolders;
+
+    [SerializeField] double snapDistance;
 
     public static GameManager Inst = null;
 
@@ -19,10 +21,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        discs = FindObjectsOfType<Disc>();
         discHolders = FindObjectsOfType<DiscHolder>();
         foreach (Disc disc in discs) {
             disc.SetSpinning(true);
         }
+
+        DebugNodes();
     }
 
     // Update is called once per frame
@@ -43,6 +48,23 @@ public class GameManager : MonoBehaviour
                 closest = discHolder;
             }
         }
-        return closest;
+        if (min < snapDistance)
+            return closest;
+        else
+            return null;
+    }
+
+
+    public void DebugNodes()
+    {
+        string print = "";
+        foreach (DiscHolder holder in discHolders)
+            if (holder.GetDiscHeld() != null)
+                print += holder.gameObject.name + " is holding " + holder.GetDiscHeld().gameObject.name + "\n";
+
+        foreach (Disc disc in discs)
+                print += disc.gameObject.name + " is on " + disc.GetHolder().gameObject.name + "\n";
+
+        Debug.Log(print);
     }
 }

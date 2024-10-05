@@ -4,4 +4,21 @@ using UnityEngine;
 
 public class DiscHolder : MonoBehaviour
 {
+    private Disc discHeld = null;
+
+    public Disc GetDiscHeld()
+    {
+        return discHeld;
+    }
+
+    public void AttachDisc(Disc disc)
+    {
+        discHeld = disc;
+    }
+
+    public void DetatchDisc(Disc disc)
+    {
+        if (discHeld == disc)
+            discHeld = null;
+    }
 }
