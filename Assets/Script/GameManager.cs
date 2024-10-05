@@ -23,10 +23,6 @@ public class GameManager : MonoBehaviour
     {
         discs = FindObjectsOfType<Disc>();
         discHolders = FindObjectsOfType<DiscHolder>();
-        foreach (Disc disc in discs) {
-            disc.SetSpinning(true);
-            disc.BeginAudio();
-        }
 
         DebugNodes();
     }

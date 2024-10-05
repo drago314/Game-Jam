@@ -20,7 +20,6 @@ public class Disc : MonoBehaviour
     void Start()
     {
         audioSource.clip = audioClip;
-        audioSource.volume = 0f;
         SetHolder(currentHolder);
     }
 
@@ -77,16 +76,6 @@ public class Disc : MonoBehaviour
         return transform.rotation.eulerAngles.z;
     }
 
-    public void SetSpinning(bool spinning)
-    {
-        this.spinning = spinning;
-    }
-
-    public void BeginAudio()
-    {
-        audioSource.Play();
-    } 
-
     private void Spin()
     {
         transform.Rotate(new Vector3(0, 0, spinSpeed));
@@ -110,11 +99,15 @@ public class Disc : MonoBehaviour
         transform.position = currentHolder.transform.position;
     }
 
-    public void PlayDisc(bool playing)
+    public void PlayDisc()
     {
-        if (playing)
-            audioSource.volume = 0.5f;
-        else
-            audioSource.volume = 0f;
+        spinning = true;
+        audioSource.Play();
+    }
+
+    public void StopDisc()
+    {
+        spinning = false;
+        audioSource.Stop();
     }
 }
