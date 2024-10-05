@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class RecordPlayer : DiscHolder
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void AttachDisc(Disc disc)
     {
-        
+        base.AttachDisc(disc);
+        GetDiscHeld().PlayDisc(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void DetachDisc(Disc disc)
     {
-        
+        GetDiscHeld().PlayDisc(false);
+        base.DetachDisc(disc);
     }
 }

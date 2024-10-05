@@ -11,12 +11,12 @@ public class DiscHolder : MonoBehaviour
         return discHeld;
     }
 
-    public void AttachDisc(Disc disc)
+    public virtual void AttachDisc(Disc disc)
     {
         discHeld = disc;
     }
 
-    public void DetatchDisc(Disc disc)
+    public virtual void DetachDisc(Disc disc)
     {
         if (discHeld == disc)
             discHeld = null;

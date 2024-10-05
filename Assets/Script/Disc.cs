@@ -10,12 +10,17 @@ public class Disc : MonoBehaviour
     private double spinTimer = 0;
     private bool spinning;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
+
     private bool dragging;
     private Vector3 dragOffset;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource.clip = audioClip;
+        audioSource.volume = 0f;
         SetHolder(currentHolder);
     }
 
@@ -77,6 +82,11 @@ public class Disc : MonoBehaviour
         this.spinning = spinning;
     }
 
+    public void BeginAudio()
+    {
+        audioSource.Play();
+    } 
+
     private void Spin()
     {
         transform.Rotate(new Vector3(0, 0, spinSpeed));
@@ -84,7 +94,7 @@ public class Disc : MonoBehaviour
 
     public void SetHolder(DiscHolder discHolder)
     {
-        currentHolder.DetatchDisc(this);
+        currentHolder.DetachDisc(this);
         currentHolder = discHolder;
         currentHolder.AttachDisc(this);
         SnapToHolder();
@@ -98,5 +108,13 @@ public class Disc : MonoBehaviour
     private void SnapToHolder()
     {
         transform.position = currentHolder.transform.position;
+    }
+
+    public void PlayDisc(bool playing)
+    {
+        if (playing)
+            audioSource.volume = 0.5f;
+        else
+            audioSource.volume = 0f;
     }
 }
