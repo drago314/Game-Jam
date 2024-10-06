@@ -1746,7 +1746,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can stop an active record by clicking on it
+  m_text: 'You can stop an active record by clicking on it
+
+    Not all records will
+    be used in each story'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f9b8c9687195c0444a6562896e540ef9, type: 2}
   m_sharedMaterial: {fileID: 1186244103867319543, guid: f9b8c9687195c0444a6562896e540ef9, type: 2}

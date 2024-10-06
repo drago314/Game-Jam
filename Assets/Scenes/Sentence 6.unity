@@ -1473,9 +1473,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1771759915686703373, guid: 0b20431622880496f99de9020e6dd92f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.37
+      objectReference: {fileID: 0}
     - target: {fileID: 3372762928324180622, guid: 0b20431622880496f99de9020e6dd92f, type: 3}
       propertyPath: m_fontSizeMin
-      value: 34.36
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3372762928324180622, guid: 0b20431622880496f99de9020e6dd92f, type: 3}
       propertyPath: m_enableAutoSizing
