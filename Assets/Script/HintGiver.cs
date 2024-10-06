@@ -11,9 +11,19 @@ public class HintGiver : MonoBehaviour
 
     [SerializeField] AudioSource source;
 
+    public Transform button;
+    float scaleMult = 1;
+    Vector2 defaultScale;
+
     private void Start()
     {
         wordList = new List<string>(solution.Split(" "));
+        defaultScale = button.localScale;
+    }
+
+    private void Update()
+    {
+        button.localScale = Vector2.Lerp(button.localScale, defaultScale * scaleMult, Time.deltaTime * 10);
     }
 
     public void HintButtonPressed()
@@ -26,4 +36,6 @@ public class HintGiver : MonoBehaviour
         source.pitch = Random.Range(0.8f, 1.2f);
         source.Play();
     }
+
+    public void ChangeScaleMult(float mult) { scaleMult = mult; Debug.Log(mult); }
 }

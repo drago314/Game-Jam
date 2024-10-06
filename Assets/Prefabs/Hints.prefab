@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1068444222311309535}
   - component: {fileID: 6593634320205203961}
   - component: {fileID: 6586296538585813925}
+  - component: {fileID: 5575763346608787696}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -26,18 +27,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177578431637052928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5451758191621505989}
+  m_Father: {fileID: 3974267030647267239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 51.7, y: 0}
-  m_SizeDelta: {x: 189.2321, y: 132.8}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0.000015258789}
+  m_SizeDelta: {x: 245.3361, y: 172.1729}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1068444222311309535
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -132,6 +133,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5575763346608787696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177578431637052928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6179050827105210502}
+          m_TargetAssemblyTypeName: HintGiver, Assembly-CSharp
+          m_MethodName: ChangeScaleMult
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1.24
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6179050827105210502}
+          m_TargetAssemblyTypeName: HintGiver, Assembly-CSharp
+          m_MethodName: ChangeScaleMult
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1063300026125345181
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +383,7 @@ MonoBehaviour:
   solution: Woody went on a voyage to a mushroom-shaped island in the Pacific on
     his small ship.
   source: {fileID: 7645905968424920999}
+  button: {fileID: 6804689431627646557}
 --- !u!82 &7645905968424920999
 AudioSource:
   m_ObjectHideFlags: 0
@@ -347,7 +394,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7e5f93be849b2954a9e5c37f44f6d520, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef9528f4e406c6f49a20da25aa2cf9ea, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
@@ -433,6 +480,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &4745301498053255338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3974267030647267239}
+  - component: {fileID: 6349137176578397062}
+  m_Layer: 5
+  m_Name: Button (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3974267030647267239
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745301498053255338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6804689431627646557}
+  m_Father: {fileID: 5451758191621505989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 29, y: -24}
+  m_SizeDelta: {x: 189.2321, y: 132.8}
+  m_Pivot: {x: 1, y: 1}
+--- !u!222 &6349137176578397062
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745301498053255338}
+  m_CullTransparentMesh: 1
 --- !u!1 &8994525560385753291
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +556,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6804689431627646557}
+  - {fileID: 3974267030647267239}
   - {fileID: 1771759915686703373}
   - {fileID: 1209382498542478877}
   m_Father: {fileID: 0}

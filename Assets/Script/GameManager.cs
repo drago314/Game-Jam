@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
 
     public string nextLoad;
 
+    public AudioSource source;
+    bool beat;
+
     private void Awake()
     {
         if (Inst != null)
@@ -25,6 +28,8 @@ public class GameManager : MonoBehaviour
         Inst = this;
 
         currentConstructedString = new List<string>();
+
+        TryGetComponent<AudioSource>(out source);
 
         if (SceneManager.GetActiveScene().name == "Menu" || SceneManager.GetActiveScene().name == "Credits") return;
         PlayerPrefs.SetString("level", SceneManager.GetActiveScene().name);
@@ -60,8 +65,10 @@ public class GameManager : MonoBehaviour
         else
             levelCompleted = false;
 
-        if (levelCompleted)
+        if (levelCompleted && !beat)
         {
+            beat = true;
+            source.PlayDelayed(1.5f);
             Invoke("Blink", 4);
         }
     }
