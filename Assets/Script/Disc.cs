@@ -12,7 +12,7 @@ public class Disc : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource, staticSource;
     public AudioSource foleySource;
-    [SerializeField] private AudioClip placeClip, playClip;
+    [SerializeField] private AudioClip placeClip, playClip, singleSource;
     private float staticSourceVol;
 
     [SerializeField] private int[] myWordIndeces;
@@ -120,7 +120,9 @@ public class Disc : MonoBehaviour
         audioSource.Play();
         staticSource.Play();
         foleySource.PlayOneShot(playClip);
+        if (singleSource) { audioSource.clip = singleSource; audioSource.Play(); Invoke("AbruptStop", singleSource.length); return; }
         StartCoroutine("StartPlayingClips");
+        CancelInvoke("AbruptStop");
     }
 
     // plays every word in 2 second intervals to allow for other records to play in the blank space
@@ -145,7 +147,7 @@ public class Disc : MonoBehaviour
             if (i < myWordIndeces.Length - 1) yield return new WaitForSeconds(Mathf.Abs(myWordIndeces[i] - myWordIndeces[i + 1]));
             else 
             {
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(Mathf.Max(2, audioSource.clip.length));
                 foleySource.PlayOneShot(playClip);
                 StopDisc();
             }
@@ -161,4 +163,5 @@ public class Disc : MonoBehaviour
         staticSource.Stop();
         StopCoroutine("StartPlayingClips");
     }
+    private void AbruptStop() { foleySource.PlayOneShot(playClip); StopDisc(); }
 }

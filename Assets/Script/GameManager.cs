@@ -50,8 +50,7 @@ public class GameManager : MonoBehaviour
 
         if (levelCompleted)
         {
-            blinker.SetActive(true);
-            Invoke("LoadNextScene", 0.6f);
+            Invoke("Blink", 4);
         }
     }
 
@@ -91,5 +90,11 @@ public class GameManager : MonoBehaviour
                 print += disc.gameObject.name + " is on " + disc.GetHolder().gameObject.name + "\n";
 
         Debug.Log(print);
+    }
+
+    private void Blink()
+    {
+        blinker.SetActive(true);
+        Invoke("LoadNextScene", 0.6f);
     }
 }
