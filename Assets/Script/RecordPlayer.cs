@@ -10,13 +10,11 @@ public class RecordPlayer : DiscHolder
     public override void AttachDisc(Disc disc)
     {
         base.AttachDisc(disc);
-        _myButton.enabled = true;
         disc.foleySource.Play();
     }
 
     public override void DetachDisc(Disc disc)
     {
-        _myButton.enabled = false;
         disc.StopDisc();
         base.DetachDisc(disc);
     }
