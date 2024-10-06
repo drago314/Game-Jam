@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Inst = null;
 
     public List<string> currentConstructedString;
-    public string[] currentSentence;
-    public AudioClip[] sentenceClips;
+    public string[] currentSentence, redHerringList;
+    public AudioClip[] sentenceClips, redHerringClips;
 
     public string nextLoad;
 

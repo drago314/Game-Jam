@@ -142,22 +142,26 @@ public class Disc : MonoBehaviour
         {
             GameManager gm = GameManager.Inst;
 
-            audioSource.clip = gm.sentenceClips[myWordIndeces[i]];
+            string[] sourceArray;
+            int index = myWordIndeces[i];
+            if (index < 0) { index *= -1; sourceArray = gm.redHerringList; audioSource.clip = gm.redHerringClips[index]; }
+            else { sourceArray = gm.currentSentence; audioSource.clip = gm.sentenceClips[index]; }
+
             audioSource.Play();
 
             staticSource.volume = staticSourceVol / 2;
             Invoke("ReupStatic", audioSource.clip.length);
 
-            caption.text = gm.currentSentence[myWordIndeces[i]];
+            caption.text = sourceArray[index];
             Invoke("ResetCaption", 1);
 
-            if (gm.currentConstructedString.Count < gm.currentSentence.Length) gm.currentConstructedString.Add(gm.currentSentence[myWordIndeces[i]]);
+            if (gm.currentConstructedString.Count < gm.currentSentence.Length) gm.currentConstructedString.Add(gm.currentSentence[index]);
             else
             {
                 gm.currentConstructedString.RemoveAt(0);
-                gm.currentConstructedString.Add(gm.currentSentence[myWordIndeces[i]]);
+                gm.currentConstructedString.Add(sourceArray[index]);
             }
-            if (i < myWordIndeces.Length - 1) yield return new WaitForSeconds(Mathf.Abs(myWordIndeces[i] - myWordIndeces[i + 1]));
+            if (i < myWordIndeces.Length - 1) yield return new WaitForSeconds(Mathf.Abs(index - Mathf.Abs(myWordIndeces[i + 1])));
             else 
             {
                 yield return new WaitForSeconds(Mathf.Max(2, audioSource.clip.length));
