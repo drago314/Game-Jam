@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sentence 2.unity
     guid: 61d26eccbc1054004b7a83662b546a67
+  - enabled: 1
+    path: Assets/Scenes/Sentence 3.unity
+    guid: c83c488c16d654706abceda7167828f0
+  - enabled: 1
+    path: Assets/Scenes/Sentence 4.unity
+    guid: c67c5aad7d55b8c4aa4281a30e9a07c8
+  - enabled: 1
+    path: Assets/Scenes/Sentence 5.unity
+    guid: 3e2450737ca7f46348e65420c9aa7afd
+  - enabled: 1
+    path: Assets/Scenes/Sentence 6.unity
+    guid: 61d49490cea3d35438883a59dc34b1f9
   m_configObjects: {}
