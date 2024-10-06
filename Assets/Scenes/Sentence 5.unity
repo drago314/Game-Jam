@@ -1086,6 +1086,7 @@ MonoBehaviour:
   snapDistance: 10
   blinker: {fileID: 1521506669}
   currentConstructedString: []
+  checkingSentence: []
   currentSentence:
   - The next
   - morning, Woody
@@ -1107,6 +1108,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f898a361875ba46eaa9825457813bf68, type: 3}
   - {fileID: 8300000, guid: 9490797f829ce444d9ea94a95cd7e738, type: 3}
   - {fileID: 8300000, guid: 6b3fdb069b66443748442779dff0b710, type: 3}
+  - {fileID: 0}
   - {fileID: 8300000, guid: ff45b0822fb4b4378aacd44219bf2f10, type: 3}
   - {fileID: 8300000, guid: ad968e771341d41348a77e1c182544b7, type: 3}
   - {fileID: 8300000, guid: 6c09bd764f8ca46a0bb87ef054c3bb15, type: 3}
