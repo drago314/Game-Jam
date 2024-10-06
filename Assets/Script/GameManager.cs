@@ -68,8 +68,8 @@ public class GameManager : MonoBehaviour
         if (levelCompleted && !beat)
         {
             beat = true;
-            source.PlayDelayed(1.5f);
-            Invoke("Blink", 4);
+            Invoke("SentenceWinSound", 1.4f);
+            Invoke("Blink", 3);
         }
     }
 
@@ -117,4 +117,6 @@ public class GameManager : MonoBehaviour
         blinker.SetActive(true);
         Invoke("LoadNextScene", 0.6f);
     }
+
+    private void SentenceWinSound() { if (!source) { return; } source.Play(); }
 }

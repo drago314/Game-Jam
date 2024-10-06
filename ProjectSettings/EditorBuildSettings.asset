@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sentence 6.unity
     guid: 61d49490cea3d35438883a59dc34b1f9
+  - enabled: 1
+    path: Assets/Scenes/Rickroll.unity
+    guid: a94407de33b27453e893a7b959f70216
   m_configObjects: {}
