@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Disc : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Disc : MonoBehaviour
     public AudioSource foleySource;
     [SerializeField] private AudioClip placeClip, playClip, singleSource;
     private float staticSourceVol;
+    public Light2D myLight;
 
     [SerializeField] private int[] myWordIndeces;
 
@@ -39,6 +41,7 @@ public class Disc : MonoBehaviour
     {
         // spin
         if (spinning) { Spin(); }
+        myLight.enabled = spinning;
 
         //drag
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
