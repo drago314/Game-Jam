@@ -1175,7 +1175,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 79afbe91943ca4a1f908e586a16a2f55, type: 3}
   - {fileID: 8300000, guid: d48fef49e49a24bb2b20dfef36982521, type: 3}
   - {fileID: 8300000, guid: d96593a7adc5b407ba89d763fa6a1017, type: 3}
-  - {fileID: 8300000, guid: b295d6665217f41439bed54e2989344f, type: 3}
+  - {fileID: 8300000, guid: 045eb9213cdb5419a80048166e92ca6f, type: 3}
   - {fileID: 8300000, guid: cf8c4319c2e0e44dcbe3f6425e79b261, type: 3}
   redHerringClips: []
   nextLoad: 
@@ -1473,9 +1473,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1771759915686703373, guid: 0b20431622880496f99de9020e6dd92f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.37
+      objectReference: {fileID: 0}
     - target: {fileID: 3372762928324180622, guid: 0b20431622880496f99de9020e6dd92f, type: 3}
       propertyPath: m_fontSizeMin
-      value: 34.36
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3372762928324180622, guid: 0b20431622880496f99de9020e6dd92f, type: 3}
       propertyPath: m_enableAutoSizing
