@@ -167,7 +167,13 @@ public class Disc : MonoBehaviour
             {
                 yield return new WaitForSeconds(Mathf.Max(2, audioSource.clip.length));
                 foleySource.PlayOneShot(playClip);
-                if (superSpecialInt == 1) { gm.Blink(); gm.nextLoad = "SampleScene"; }
+                if (superSpecialInt == 1) 
+                {
+                    gm.Blink();
+                    string load = "SampleScene";
+                    if (PlayerPrefs.GetString("level") != "") { load = PlayerPrefs.GetString("level"); }
+                    gm.nextLoad = "SampleScene"; 
+                }
                 if (superSpecialInt == 2) { gm.Blink(); gm.nextLoad = "Credits"; }
                 if (superSpecialInt == 3) { gm.Blink(); gm.nextLoad = "Menu"; }
                 StopDisc();

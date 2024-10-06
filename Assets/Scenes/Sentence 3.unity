@@ -199,6 +199,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 29443f6c1249741cd91fefae8a1728d7, type: 3}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: singleSource
+      value: 
+      objectReference: {fileID: 8300000, guid: c05f88a752046bc49a0d202351acdf24, type: 3}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: currentHolder
       value: 
       objectReference: {fileID: 753171764}
@@ -759,6 +763,7 @@ MonoBehaviour:
   snapDistance: 10
   blinker: {fileID: 1521506669}
   currentConstructedString: []
+  checkingSentence: []
   currentSentence:
   - Woody
   - crept

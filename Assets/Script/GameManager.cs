@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
         Inst = this;
 
         currentConstructedString = new List<string>();
+
+        if (SceneManager.GetActiveScene().name == "Menu" || SceneManager.GetActiveScene().name == "Credits") return;
+        PlayerPrefs.SetString("level", SceneManager.GetActiveScene().name);
     }
 
     // Start is called before the first frame update
