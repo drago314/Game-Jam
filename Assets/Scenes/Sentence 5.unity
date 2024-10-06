@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
@@ -573,11 +573,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 9
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: myWordIndeces.Array.data[3]
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -812,11 +816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1086,6 +1090,7 @@ MonoBehaviour:
   - The next
   - morning, Woody
   - reached the
+  - 
   - marked
   - location
   - and dug
@@ -1114,6 +1119,7 @@ MonoBehaviour:
   redHerringClips:
   - {fileID: 0}
   - {fileID: 8300000, guid: 2d024984b34844e14b87cb77092e5596, type: 3}
+  - {fileID: 0}
   nextLoad: 
 --- !u!4 &475685295
 Transform:
@@ -1531,15 +1537,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1857,7 +1863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

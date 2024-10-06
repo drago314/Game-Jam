@@ -155,11 +155,12 @@ public class Disc : MonoBehaviour
             caption.text = sourceArray[index];
             Invoke("ResetCaption", 1);
 
-            if (gm.currentConstructedString.Count < gm.currentSentence.Length) gm.currentConstructedString.Add(gm.currentSentence[index]);
+            if (gm.currentConstructedString.Count < gm.checkingSentence.Count) gm.currentConstructedString.Add(gm.currentSentence[index]);
             else
             {
                 gm.currentConstructedString.RemoveAt(0);
-                gm.currentConstructedString.Add(sourceArray[index]);
+                if (!sourceArray[index].Equals(""))
+                    gm.currentConstructedString.Add(sourceArray[index]);
             }
             if (i < myWordIndeces.Length - 1) yield return new WaitForSeconds(Mathf.Abs(index - Mathf.Abs(myWordIndeces[i + 1])));
             else 

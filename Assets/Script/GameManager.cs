@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Inst = null;
 
     public List<string> currentConstructedString;
+    public List<string> checkingSentence;
     public string[] currentSentence, redHerringList;
     public AudioClip[] sentenceClips, redHerringClips;
 
@@ -33,17 +34,23 @@ public class GameManager : MonoBehaviour
         discHolders = FindObjectsOfType<DiscHolder>();
 
         DebugNodes();
+
+        foreach (string s in currentSentence)
+        {
+            if (!s.Equals(""))
+                checkingSentence.Add(s);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         bool levelCompleted = true;
-        if (currentConstructedString.Count == currentSentence.Length)
+        if (currentConstructedString.Count == checkingSentence.Count)
         {
-            for (int i = 0; i < currentSentence.Length; i++)
+            for (int i = 0; i < checkingSentence.Count; i++)
             {
-                if (!currentSentence[i].Equals(currentConstructedString[i]))
+                if (!checkingSentence[i].Equals(currentConstructedString[i]))
                     levelCompleted = false;
             }
         }
