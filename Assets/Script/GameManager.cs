@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public string[] currentSentence;
     public AudioClip[] sentenceClips;
 
+    public string nextLoad;
+
     private void Awake()
     {
         if (Inst != null)
@@ -56,7 +58,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (nextLoad == "") { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
+        else { SceneManager.LoadScene(nextLoad); }
     }
 
     public DiscHolder GetClosestDiscHolderToPosition(Vector2 position)
@@ -92,7 +95,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(print);
     }
 
-    private void Blink()
+    public void Blink()
     {
         blinker.SetActive(true);
         Invoke("LoadNextScene", 0.6f);

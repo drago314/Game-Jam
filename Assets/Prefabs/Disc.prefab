@@ -214,6 +214,8 @@ MonoBehaviour:
   placeClip: {fileID: 8300000, guid: 380c453ab6215f748a7c20aa31670145, type: 3}
   playClip: {fileID: 8300000, guid: 7d020ce562b309f46b75e0f0faa930ae, type: 3}
   singleSource: {fileID: 0}
+  blipClip: {fileID: 8300000, guid: e880898481dc5aa4d94feacba7472b0d, type: 3}
+  pickupClip: {fileID: 8300000, guid: 34f995b422bf2584cbe6a1024365ab33, type: 3}
   myLight: {fileID: 7075234646223895589}
   myWordIndeces: 
   caption: {fileID: 2890910041319224357}

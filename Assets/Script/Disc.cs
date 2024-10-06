@@ -14,7 +14,7 @@ public class Disc : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource, staticSource;
     public AudioSource foleySource;
-    [SerializeField] private AudioClip placeClip, playClip, singleSource;
+    [SerializeField] private AudioClip placeClip, playClip, singleSource, blipClip, pickupClip;
     private float staticSourceVol;
     public Light2D myLight;
 
@@ -28,6 +28,8 @@ public class Disc : MonoBehaviour
 
     private Vector2 goToPos;
     private float snapSpeed = 10;
+
+    [SerializeField] private int superSpecialInt;
 
     [SerializeField] private TextMeshProUGUI caption;
 
@@ -53,9 +55,11 @@ public class Disc : MonoBehaviour
 
         if (targetObject && targetObject.transform.gameObject == this.gameObject)
         {
+            if (currentScaleMult < 1.1f && !dragging) { foleySource.PlayOneShot(blipClip, 0); }
             currentScaleMult = 1.15f;
             if (Input.GetMouseButtonDown(0))
             {
+                foleySource.PlayOneShot(pickupClip, 0.7f);
                 dragging = true;
                 dragOffset = transform.position - mousePosition;
                 if (spinning) { StopDisc(); }
@@ -158,6 +162,9 @@ public class Disc : MonoBehaviour
             {
                 yield return new WaitForSeconds(Mathf.Max(2, audioSource.clip.length));
                 foleySource.PlayOneShot(playClip);
+                if (superSpecialInt == 1) { gm.Blink(); gm.nextLoad = "SampleScene"; }
+                if (superSpecialInt == 2) { gm.Blink(); gm.nextLoad = "Credits"; }
+                if (superSpecialInt == 3) { gm.Blink(); gm.nextLoad = "Menu"; }
                 StopDisc();
             }
         }
