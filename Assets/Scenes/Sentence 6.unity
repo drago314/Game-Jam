@@ -260,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -407,15 +407,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[3]
@@ -717,15 +717,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[3]
@@ -916,15 +916,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[3]
@@ -1123,7 +1123,6 @@ MonoBehaviour:
   - the chest expecting
   - gold
   - 
-  - 
   - but
   - instead
   - he found
@@ -1152,7 +1151,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 30247006854fa4c8f9f866189404365a, type: 3}
   - {fileID: 8300000, guid: e7f8e055353bc4a568db9c9e1669e65b, type: 3}
   - {fileID: 8300000, guid: a2d37f7ccf0ab44809e25de06ebf27aa, type: 3}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 8300000, guid: 422785b39971d4678b5e44726d012557, type: 3}
   - {fileID: 8300000, guid: 38caeb4d0f88c4290863ae18c6393368, type: 3}
@@ -1812,7 +1810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
@@ -1957,19 +1955,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[3]
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2167,11 +2165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
@@ -2309,11 +2307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
@@ -4041,7 +4039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
