@@ -634,6 +634,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 397240d3af654d543ab2e50228ca54c0, type: 3}
   - {fileID: 8300000, guid: da2780c099b8d48a88aaca3c412d4c08, type: 3}
   - {fileID: 8300000, guid: 5207138b6f4ad5145913f18f219c3083, type: 3}
+  nextLoad: 
 --- !u!4 &475685295
 Transform:
   m_ObjectHideFlags: 0
@@ -2708,7 +2709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1948660567
 MonoBehaviour:
   m_ObjectHideFlags: 0
