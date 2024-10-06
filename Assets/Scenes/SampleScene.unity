@@ -759,7 +759,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"Woody the pirate found an old map
 
-    in the boxes in the attic."'
+    in the boxes in his attic."'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f9b8c9687195c0444a6562896e540ef9, type: 2}
   m_sharedMaterial: {fileID: 1186244103867319543, guid: f9b8c9687195c0444a6562896e540ef9, type: 2}
