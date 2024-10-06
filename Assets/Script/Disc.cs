@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using TMPro;
 
 public class Disc : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class Disc : MonoBehaviour
 
     private Vector2 goToPos;
     private float snapSpeed = 10;
+
+    [SerializeField] private TextMeshProUGUI caption;
 
     // Start is called before the first frame update
     void Start()
@@ -141,6 +144,9 @@ public class Disc : MonoBehaviour
             staticSource.volume = staticSourceVol / 2;
             Invoke("ReupStatic", audioSource.clip.length);
 
+            caption.text = gm.currentSentence[myWordIndeces[i]];
+            Invoke("ResetCaption", 1);
+
             if (gm.currentConstructedString.Count < gm.currentSentence.Length) gm.currentConstructedString.Add(gm.currentSentence[myWordIndeces[i]]);
             else
             {
@@ -169,4 +175,6 @@ public class Disc : MonoBehaviour
     private void AbruptStop() { foleySource.PlayOneShot(playClip); StopDisc(); }
 
     public bool GetDragging() { return dragging; }
+
+    private void ResetCaption() { caption.text = ""; }
 }
