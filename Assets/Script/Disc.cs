@@ -167,4 +167,6 @@ public class Disc : MonoBehaviour
         StopCoroutine("StartPlayingClips");
     }
     private void AbruptStop() { foleySource.PlayOneShot(playClip); StopDisc(); }
+
+    public bool GetDragging() { return dragging; }
 }
