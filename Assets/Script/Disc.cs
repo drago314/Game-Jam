@@ -172,7 +172,7 @@ public class Disc : MonoBehaviour
                     gm.Blink();
                     string load = "SampleScene";
                     if (PlayerPrefs.GetString("level") != "") { load = PlayerPrefs.GetString("level"); }
-                    gm.nextLoad = "SampleScene"; 
+                    gm.nextLoad = load; 
                 }
                 if (superSpecialInt == 2) { gm.Blink(); gm.nextLoad = "Credits"; }
                 if (superSpecialInt == 3) { gm.Blink(); gm.nextLoad = "Menu"; }

@@ -622,6 +622,7 @@ MonoBehaviour:
   snapDistance: 10
   blinker: {fileID: 1521506669}
   currentConstructedString: []
+  checkingSentence: []
   currentSentence:
   - Woody
   - went
@@ -633,6 +634,7 @@ MonoBehaviour:
   - his
   - 'small '
   - ship
+  redHerringList: []
   sentenceClips:
   - {fileID: 8300000, guid: 3c2472ecf677144bc9070a826f5c33a3, type: 3}
   - {fileID: 8300000, guid: 22c87c8dede384d4f8fe5355ca6a85cc, type: 3}
@@ -644,6 +646,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39c6c7efddce440668567afb89320ff1, type: 3}
   - {fileID: 8300000, guid: 5b156b1ef90824fe18b7b2b942c813ed, type: 3}
   - {fileID: 8300000, guid: cb00062040f954653b07043e037d2ce8, type: 3}
+  redHerringClips: []
+  nextLoad: Sentence 4
 --- !u!4 &475685295
 Transform:
   m_ObjectHideFlags: 0
