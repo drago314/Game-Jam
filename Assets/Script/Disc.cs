@@ -33,6 +33,8 @@ public class Disc : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI caption;
 
+    bool untouchable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +55,7 @@ public class Disc : MonoBehaviour
 
         Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
-        if (targetObject && targetObject.transform.gameObject == this.gameObject)
+        if (targetObject && targetObject.transform.gameObject == this.gameObject && !untouchable)
         {
             if (currentScaleMult < 1.1f && !dragging) { foleySource.PlayOneShot(blipClip, 0); }
             currentScaleMult = 1.15f;
@@ -130,6 +132,7 @@ public class Disc : MonoBehaviour
         audioSource.Play();
         staticSource.Play();
         foleySource.PlayOneShot(playClip);
+        if (superSpecialInt == 4) { untouchable = true; }
         if (singleSource) { audioSource.clip = singleSource; audioSource.Play(); Invoke("AbruptStop", singleSource.length); return; }
         StartCoroutine("StartPlayingClips");
         CancelInvoke("AbruptStop");

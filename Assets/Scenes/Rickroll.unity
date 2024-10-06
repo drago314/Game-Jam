@@ -179,6 +179,10 @@ PrefabInstance:
       value: Disc
       objectReference: {fileID: 0}
     - target: {fileID: 4891005475052883163, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: m_Volume
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891005475052883163, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1725114776190008127, guid: bbbb99b479e42bb4f82066d9231be727, type: 2}
@@ -191,9 +195,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 5f5da93444d3f467f8adffb310226996, type: 3}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: singleSource
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e0635cf98c2dbc4fb049b153c92bdf2, type: 3}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: currentHolder
       value: 
       objectReference: {fileID: 753171764}
+    - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
+      propertyPath: superSpecialInt
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: timing.Array.size
       value: 4
@@ -409,7 +421,8 @@ MonoBehaviour:
   blinker: {fileID: 1521506669}
   currentConstructedString: []
   checkingSentence: []
-  currentSentence: []
+  currentSentence:
+  - a
   redHerringList: []
   sentenceClips: []
   redHerringClips: []

@@ -9,6 +9,8 @@ public class HintGiver : MonoBehaviour
     [SerializeField] private string solution;
     private List<string> wordList;
 
+    [SerializeField] AudioSource source;
+
     private void Start()
     {
         wordList = new List<string>(solution.Split(" "));
@@ -21,5 +23,7 @@ public class HintGiver : MonoBehaviour
         text.text += " ";
         text.text += wordList[0];
         wordList.RemoveAt(0);
+        source.pitch = Random.Range(0.8f, 1.2f);
+        source.Play();
     }
 }
