@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
@@ -573,11 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[3]
@@ -816,11 +816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1092,6 +1092,7 @@ MonoBehaviour:
   - morning, Woody
   - reached the
   - 
+  - 
   - marked
   - location
   - and dug
@@ -1106,8 +1107,9 @@ MonoBehaviour:
   - the bees buzzed
   sentenceClips:
   - {fileID: 8300000, guid: f898a361875ba46eaa9825457813bf68, type: 3}
-  - {fileID: 8300000, guid: 9490797f829ce444d9ea94a95cd7e738, type: 3}
+  - {fileID: 8300000, guid: 6be3fd024673049518d2ed7a3183c345, type: 3}
   - {fileID: 8300000, guid: 6b3fdb069b66443748442779dff0b710, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 8300000, guid: ff45b0822fb4b4378aacd44219bf2f10, type: 3}
   - {fileID: 8300000, guid: ad968e771341d41348a77e1c182544b7, type: 3}
@@ -1539,15 +1541,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[0]
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[2]
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1865,7 +1867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7429150523052165735, guid: 172b1d077180b48febf713e3e9cc5b4e, type: 3}
       propertyPath: myWordIndeces.Array.data[1]
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
